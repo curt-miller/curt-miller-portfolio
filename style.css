@@ -1,0 +1,375 @@
+html body {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* the container for the entire body */
+.grid-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr 40px;
+  grid-template-areas:
+    "navbar main"
+    "footer footer";
+  height: 100vh;
+}
+
+/* the persistant navbar container */
+.navbar {
+  grid-area: navbar;
+  background-color: #4c4245;
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.7);
+  position: relative;
+  height: 100%;
+}
+
+.navbar a {
+  background-color: transparent;
+  display: block;
+  font-family: "AlteHaas";
+  text-decoration: none;
+  color: rgb(127, 115, 115);
+  padding: 6px;
+  justify-content: space-between;
+  border-radius: 6%;
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.navbar a:hover {
+  background-color: rgb(223, 156, 80);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  height: 200px;
+}
+
+/* "main" container for HOME */
+.main-home {
+  grid-area: main;
+  background-image: url(images/background3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.main-home h1 {
+  font-size: 22px;
+  text-wrap: nowrap;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url(images/messagepng.png);
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  max-width: 90%;
+  text-align: center;
+  top: 430px;
+}
+
+.main-home h2 {
+  font-size: 16px;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  background-color:rgb(76, 66, 69, .6);
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  padding: 6px;
+  text-wrap: nowrap;
+  text-align: center;
+  top: 460px;
+  margin-left: 4px;
+}
+
+/* "main" container for ABOUT */
+.main-about {
+  grid-area: main;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/grungebrackground.jpg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-about h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  background-position: center;
+  border-radius: 20px;
+  max-width: 70%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20vh;
+  margin-right: 5vw;
+}
+
+.main-about h2 {
+  font-size: 16px;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  background-position: center;
+  border-radius: 20px;
+  max-width: 60%;
+  padding: 10px;
+  text-align: center;
+  margin-left: 15vw;
+}
+
+/* "main" container for PORTFOLIO */
+.main-portfolio {
+  grid-area: main;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/grungebrackground.jpg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.main-portfolio h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  background-position: center;
+  border-radius: 20px;
+  max-width: 70%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10vh;
+  margin-right: 5vw;
+}
+
+.project-1 {
+  display: flex;
+  width: 70%;
+  height: auto;
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  border-radius: 20px;
+  margin: 10px;
+  align-items: center;
+}
+
+.project-1-text{
+text-align: center;
+font-family: "AlteHaas";
+color: aliceblue;
+font-size: 16px;
+margin: 10px;
+}
+
+.project-1 img{
+  width: auto;
+  height: 120px;
+  margin: 4px;
+  margin-right: 10px;
+}
+
+.project-2 {
+  display: flex;
+  width: 70%;
+  height: auto;
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  border-radius: 20px;
+  margin: 10px;
+  align-items: center;
+}
+
+.project-2-text{
+text-align: center;
+font-family: "AlteHaas";
+color: aliceblue;
+font-size: 16px;
+margin: 10px;
+}
+
+.project-2 img{
+  width: auto;
+  height: 120px;
+  margin: 4px;
+  margin-right: 10px;
+}
+
+.project-3 {
+  display: flex;
+  width: 70%;
+  height: auto;
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  border-radius: 20px;
+  margin: 10px;
+  align-items: center;
+}
+
+.project-3-text{
+text-align: center;
+font-family: "AlteHaas";
+color: aliceblue;
+font-size: 16px;
+margin: 10px;
+}
+
+.project-3 img{
+  width: auto;
+  height: 120px;
+  margin: 4px;
+  margin-right: 10px;
+}
+
+.project-4 {
+  display: flex;
+  width: 70%;
+  height: auto;
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  border-radius: 20px;
+  margin: 10px;
+  align-items: center;
+}
+
+.project-4-text{
+text-align: center;
+font-family: "AlteHaas";
+color: aliceblue;
+font-size: 16px;
+margin: 10px;
+}
+
+.project-4 img{
+  width: auto;
+  height: 120px;
+  margin: 4px;
+  margin-right: 10px;
+}
+
+/* "main" container for CONTACT */
+.main-contact {
+  grid-area: main;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/grungebrackground.jpg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-contact h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(238, 232, 232);
+  font-family: "AlteHaas";
+  background-color: rgba(76, 66, 69, 0.7);
+  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
+  background-position: center;
+  border-radius: 20px;
+  max-width: 70%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.main-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main-contact form input,
+.main-contact form textarea,
+.main-contact form button {
+  padding: 8px; 
+  width: 100%; 
+}
+
+
+/* the footer container */
+.footer {
+  grid-area: footer;
+  background-color: rgb(127, 115, 115);
+  /* background-color: transparent; */
+  color: #4c4245;
+  text-align: center;
+}
+
+.footer img{
+  width: 25px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.footer img:hover{
+  background-color: rgb(223, 156, 80)
+}
+
+/* Font Sourcing */
+@font-face {
+  font-family: "AlteHaas";
+  src: url("AlteHaasGroteskRegular.ttf") format("truetype");
+}
+
+
+@media (max-width: 400px){
+  .project-1{
+    flex-direction: column;
+  }
+  .project-1 img{
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px){
+  .project-2{
+    flex-direction: column;
+  }
+  .project-2 img{
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px){
+  .project-3{
+    flex-direction: column;
+  }
+  .project-3 img{
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px){
+  .project-4{
+    flex-direction: column;
+  }
+  .project-4 img{
+    height: 80px;
+  }
+}
