@@ -1,10 +1,11 @@
+  /* Sets base styling for the body, including removing default margin and setting full height */
 html body {
   margin: 0;
   height: 100%;
   box-sizing: border-box;
 }
 
-/* the container for the entire body */
+/* Main container using CSS Grid to structure the page layout with areas for navbar, main content, and footer */
 .grid-container {
   display: grid;
   grid-template-columns: 80px 1fr;
@@ -15,7 +16,7 @@ html body {
   height: 100vh;
 }
 
-/* the persistant navbar container */
+/* Navbar container on the left side, spanning the full height of the page */
 .navbar {
   grid-area: navbar;
   background-color: #4c4245;
@@ -24,6 +25,7 @@ html body {
   height: 100%;
 }
 
+/* Navbar links styling for items within the navbar */
 .navbar a {
   background-color: transparent;
   display: block;
@@ -38,10 +40,12 @@ html body {
   margin-right: 3px;
 }
 
+/* Styling for hover effect on navbar links */
 .navbar a:hover {
   background-color: rgb(223, 156, 80);
 }
 
+/* Container for links in the navbar, organized in a column */
 .links {
   display: flex;
   flex-direction: column;
@@ -50,7 +54,7 @@ html body {
   height: 200px;
 }
 
-/* "main" container for HOME */
+/* Main content container for the HOME section */
 .main-home {
   grid-area: main;
   background-image: url(images/background3.jpg);
@@ -63,6 +67,7 @@ html body {
   align-items: center; */
 }
 
+/* Main title styling for HOME section */
 .main-home h1 {
   font-size: 22px;
   text-wrap: nowrap;
@@ -81,11 +86,12 @@ html body {
   top: 430px;
 }
 
+/* Subtitle styling for HOME section */
 .main-home h2 {
   font-size: 16px;
   color: rgb(238, 232, 232);
   font-family: "AlteHaas";
-  background-color:rgb(76, 66, 69, .6);
+  background-color: rgb(76, 66, 69, 0.6);
   background-position: center;
   position: relative;
   border-radius: 20px;
@@ -96,7 +102,7 @@ html body {
   margin-left: 4px;
 }
 
-/* "main" container for ABOUT */
+/* Main content container for the ABOUT section */
 .main-about {
   grid-area: main;
   background-size: cover;
@@ -108,6 +114,7 @@ html body {
   align-items: center;
 }
 
+/* Main title styling for ABOUT section */
 .main-about h1 {
   font-size: 20px;
   text-transform: uppercase;
@@ -124,6 +131,7 @@ html body {
   margin-right: 5vw;
 }
 
+/* Subtitle styling for ABOUT section */
 .main-about h2 {
   font-size: 16px;
   color: rgb(238, 232, 232);
@@ -138,7 +146,7 @@ html body {
   margin-left: 15vw;
 }
 
-/* "main" container for PORTFOLIO */
+/* Main content container for the PORTFOLIO section */
 .main-portfolio {
   grid-area: main;
   background-size: cover;
@@ -150,7 +158,7 @@ html body {
   align-items: center;
 }
 
-
+/* Main title styling for PORTFOLIO section */
 .main-portfolio h1 {
   font-size: 20px;
   text-transform: uppercase;
@@ -167,84 +175,10 @@ html body {
   margin-right: 5vw;
 }
 
-.project-1 {
-  display: flex;
-  width: 70%;
-  height: auto;
-  background-color: rgba(76, 66, 69, 0.7);
-  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
-  border-radius: 20px;
-  margin: 10px;
-  align-items: center;
-}
-
-.project-1-text{
-text-align: center;
-font-family: "AlteHaas";
-color: aliceblue;
-font-size: 16px;
-margin: 10px;
-}
-
-.project-1 img{
-  width: auto;
-  height: 120px;
-  margin: 4px;
-  margin-right: 10px;
-}
-
-.project-2 {
-  display: flex;
-  width: 70%;
-  height: auto;
-  background-color: rgba(76, 66, 69, 0.7);
-  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
-  border-radius: 20px;
-  margin: 10px;
-  align-items: center;
-}
-
-.project-2-text{
-text-align: center;
-font-family: "AlteHaas";
-color: aliceblue;
-font-size: 16px;
-margin: 10px;
-}
-
-.project-2 img{
-  width: auto;
-  height: 120px;
-  margin: 4px;
-  margin-right: 10px;
-}
-
-.project-3 {
-  display: flex;
-  width: 70%;
-  height: auto;
-  background-color: rgba(76, 66, 69, 0.7);
-  box-shadow: 0px 0px 10px rgba(133, 124, 124, 0.3);
-  border-radius: 20px;
-  margin: 10px;
-  align-items: center;
-}
-
-.project-3-text{
-text-align: center;
-font-family: "AlteHaas";
-color: aliceblue;
-font-size: 16px;
-margin: 10px;
-}
-
-.project-3 img{
-  width: auto;
-  height: 120px;
-  margin: 4px;
-  margin-right: 10px;
-}
-
+/* Project container for individual portfolio items */
+.project-1,
+.project-2,
+.project-3,
 .project-4 {
   display: flex;
   width: 70%;
@@ -256,22 +190,30 @@ margin: 10px;
   align-items: center;
 }
 
-.project-4-text{
-text-align: center;
-font-family: "AlteHaas";
-color: aliceblue;
-font-size: 16px;
-margin: 10px;
+/* Text styling for individual portfolio projects */
+.project-1-text,
+.project-2-text,
+.project-3-text,
+.project-4-text {
+  text-align: center;
+  font-family: "AlteHaas";
+  color: aliceblue;
+  font-size: 16px;
+  margin: 10px;
 }
 
-.project-4 img{
+/* Image styling for individual portfolio projects */
+.project-1 img,
+.project-2 img,
+.project-3 img,
+.project-4 img {
   width: auto;
   height: 120px;
   margin: 4px;
   margin-right: 10px;
 }
 
-/* "main" container for CONTACT */
+/* Main content container for the CONTACT section */
 .main-contact {
   grid-area: main;
   background-size: cover;
@@ -283,6 +225,7 @@ margin: 10px;
   align-items: center;
 }
 
+/* Main title styling for CONTACT section */
 .main-contact h1 {
   font-size: 20px;
   text-transform: uppercase;
@@ -298,78 +241,59 @@ margin: 10px;
   margin-top: 10vh;
 }
 
+/* Form styling for the CONTACT section */
 .main-contact form {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* Input, textarea, and button styling for the contact form */
 .main-contact form input,
 .main-contact form textarea,
 .main-contact form button {
-  padding: 8px; 
-  width: 100%; 
+  padding: 8px;
+  width: 100%;
 }
 
-
-/* the footer container */
+/* Footer container */
 .footer {
   grid-area: footer;
   background-color: rgb(127, 115, 115);
-  /* background-color: transparent; */
   color: #4c4245;
   text-align: center;
 }
 
-.footer img{
+/* Footer icon styling */
+.footer img {
   width: 25px;
   margin: 5px;
   border-radius: 5px;
 }
 
-.footer img:hover{
-  background-color: rgb(223, 156, 80)
+/* Hover effect for footer icons */
+.footer img:hover {
+  background-color: rgb(223, 156, 80);
 }
 
-/* Font Sourcing */
+/* Font sourcing for AlteHaas font */
 @font-face {
   font-family: "AlteHaas";
   src: url("AlteHaasGroteskRegular.ttf") format("truetype");
 }
 
-
-@media (max-width: 400px){
-  .project-1{
+/* Media query for responsive styling of project items on small screens */
+@media (max-width: 400px) {
+  .project-1,
+  .project-2,
+  .project-3,
+  .project-4 {
     flex-direction: column;
   }
-  .project-1 img{
-    height: 80px;
-  }
-}
-
-@media (max-width: 400px){
-  .project-2{
-    flex-direction: column;
-  }
-  .project-2 img{
-    height: 80px;
-  }
-}
-
-@media (max-width: 400px){
-  .project-3{
-    flex-direction: column;
-  }
-  .project-3 img{
-    height: 80px;
-  }
-}
-
-@media (max-width: 400px){
-  .project-4{
-    flex-direction: column;
-  }
-  .project-4 img{
+  .project-1 img,
+  .project-2 img,
+  .project-3 img,
+  .project-4 img {
     height: 80px;
   }
 }
